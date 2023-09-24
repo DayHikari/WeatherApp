@@ -4,15 +4,48 @@
 
 body {
     margin: 0;
+    background-color: orangered;
+}
+
+header {
+    display: flex;
+    justify-content: center;
 }
 
 #header {
     position: fixed;
     top: 0;
     border: 1px solid black;
-    width: 100%;
+    width: 80%;
+    /* min-width: ??; */
     height: 100px;
     background-color: bisque;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 5px;
+    text-align: center;
+}
+
+#header div {
+    border: 1px solid black;
+}
+
+#user-input {
+    padding: 10px;
+}
+
+#header-info {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.gap-1 {
+    width: 5px;
+}
+
+.gap-2 {
+    width: 10px;
 }
 
 #content {
