@@ -16,9 +16,9 @@ header {
     position: fixed;
     top: 0;
     border: 1px solid black;
-    width: 80%;
+    width: 500px;
     /* min-width: ??; */
-    height: 100px;
+    height: 110px;
     background-color: bisque;
     display: grid;
     grid-template-columns: auto;
@@ -51,7 +51,7 @@ header {
 #content {
     width: 100%;
     height: 3000px;
-    margin-top: 100px;
+    margin-top: 220px;
     border: 1px solid black;
     background-color: red;
 }

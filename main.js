@@ -26,8 +26,15 @@ async function weatherFetch(latiLong) {
 
 // Display function
 function displayWeather (weatherData) {
+    // Set the headerTemp id to a const
     const headerTemp = document.getElementById("headerTemp");
+    // Change the text content of the headerTemp id to the current temp
     headerTemp.textContent = `${weatherData.current_weather.temperature}`;
+
+    // Create a const for the weather-image img tag
+    const weatherImage = document.getElementById("weather-image");
+    // Sets the img src to a png
+    weatherImage.src = "partly-cloudy-day.png";
 }
 
 // Call and display function
@@ -36,6 +43,7 @@ async function callAndDisplay (userInput) {
     const latiLong = await localGen(userInput);
     // Put user location latiLong into the weatherFetch function to generate weather data.
     const weatherData = await weatherFetch(latiLong);
+    // Calls the display function to update the DOM with user weather
     displayWeather(weatherData);
 }
 
@@ -43,7 +51,15 @@ async function callAndDisplay (userInput) {
 const userLocal = document.getElementById("user-location");
 const submit = document.getElementById("submit");
 submit.addEventListener("click", async function () {
-    await callAndDisplay(userLocal.value)
+    // If function to return an alert if user had not inputted a location.
+    if (userLocal.value === "") {
+        alert("Please input a location");
+        return;
+    }
+    // Calls the callAndDisplay function with user location
+    await callAndDisplay(userLocal.value);
+    // Resets the inputted value
+    userLocal.value = "";
 })
 
 
