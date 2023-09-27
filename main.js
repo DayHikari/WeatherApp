@@ -11,9 +11,7 @@ async function localGen (userInput) {
 
 // Weather fetching function
 async function weatherFetch(latiLong) {
-    const lati = latiLong[0];
-    const long = latiLong[1];
-    const response = await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${lati}&longitude=${long}&current_weather=true&forecast_days=1`);
+    const response = await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latiLong[0]}&longitude=${latiLong[1]}&current_weather=true&forecast_days=1`);
 
     if (!response.ok) {
         alert(`Request error. Status: ${response.status}`);
@@ -27,13 +25,31 @@ async function weatherFetch(latiLong) {
 }
 
 // Display function
- 
+function displayWeather (weatherData) {
+    const headerTemp = document.getElementById("headerTemp");
+    headerTemp.textContent = `${weatherData.current_weather.temperature}`;
+}
 
 // Call and display function
-// async function callAndDisplay (userInput) {
+async function callAndDisplay (userInput) {
+    // Using user inputted location, generate latitude and longitude and se to latiLong.
+    const latiLong = await localGen(userInput);
+    // Put user location latiLong into the weatherFetch function to generate weather data.
+    const weatherData = await weatherFetch(latiLong);
+    displayWeather(weatherData);
+}
 
-// }
+// Event listeners
+const userLocal = document.getElementById("user-location");
+const submit = document.getElementById("submit");
+submit.addEventListener("click", async function () {
+    await callAndDisplay(userLocal.value)
+})
 
-// Testing
-// localGen("Haydock");
-// weatherFetch(['53.46723', '-2.68166'])
+
+
+
+// // Testing
+// localGen("Bedford");
+// weatherFetch(['53.46723', '-2.68166']);
+// await callAndDisplay("Bedford");
