@@ -34,7 +34,58 @@ function displayWeather (weatherData) {
     // Create a const for the weather-image img tag
     const weatherImage = document.getElementById("weather-image");
     // Sets the img src to a png
-    weatherImage.src = "partly-cloudy-day.png";
+    // Switch function to set image depending on the weather code
+    switch (weatherData.current_weather.weathercode) {
+        case 0:
+            weatherImage.src = "sun.png";
+            break;
+        case 1:
+        case 2:
+        case 3:
+            weatherImage.src = "partly-cloudy-day.png";
+            break;
+        case 45:
+        case 48:
+            weatherImage.src = "haze.png";
+            break;
+        case 51:
+        case 53:
+        case 55:
+        case 56:
+        case 57:
+        case 61:
+        case 63:
+        case 65:
+        case 66:
+        case 67:
+        case 80:
+        case 81:
+        case 82:
+            weatherImage.src = "rain.png";
+            break;
+        case 71:
+        case 73:
+        case 75:
+        case 85:
+        case 86:
+            weatherImage.src = "snow.png";
+            break;
+        case 77:
+            weatherImage.src = "hail.png";
+            break;
+        case 95:
+        case 96:
+        case 99:
+            weatherImage.src = "storm.png";
+            break;
+    }
+
+    // Add user location to header
+    const locationTitle = document.getElementById("user-input-local")
+    const inputBox = document.getElementById("user-location");
+    locationTitle.textContent = inputBox.value;
+    // Remove input box
+    inputBox.style.display = "none";
 }
 
 // Call and display function
