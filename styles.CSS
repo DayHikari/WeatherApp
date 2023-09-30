@@ -40,6 +40,23 @@ header {
     text-align: center;
 }
 
+#submit {
+    margin-left: 5px;
+}
+
+#re-submit {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    color: transparent;
+    position: relative;
+    top: 0px;
+    background-image: url("redo.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    border: transparent;
+}
+
 #header-info {
     display: flex;
     text-align: center;

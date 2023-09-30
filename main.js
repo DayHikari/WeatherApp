@@ -1,4 +1,7 @@
 // Variable location
+const locationLabel = document.getElementById("location-label");
+const inputBox = document.getElementById("location-input");
+const submit = document.getElementById("submit");
 
 // Location generating function
 async function localGen (userInput) {
@@ -81,9 +84,7 @@ function displayWeather (weatherData) {
     }
 
     // Add user location to header
-    const locationTitle = document.getElementById("user-input-local")
-    const inputBox = document.getElementById("user-location");
-    locationTitle.textContent = inputBox.value;
+    locationLabel.textContent += inputBox.value;
     // Remove input box
     inputBox.style.display = "none";
 }
@@ -99,18 +100,19 @@ async function callAndDisplay (userInput) {
 }
 
 // Event listeners
-const userLocal = document.getElementById("user-location");
-const submit = document.getElementById("submit");
 submit.addEventListener("click", async function () {
     // If function to return an alert if user had not inputted a location.
-    if (userLocal.value === "") {
+    if (inputBox.value === "") {
         alert("Please input a location");
         return;
     }
     // Calls the callAndDisplay function with user location
-    await callAndDisplay(userLocal.value);
+    await callAndDisplay(inputBox.value);
     // Resets the inputted value
-    userLocal.value = "";
+    inputBox.value = "";
+    // Change submit to re-submit
+    submit.textContent = "Re-submit";
+    submit.id = "re-submit";
 })
 
 
