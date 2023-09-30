@@ -2,6 +2,7 @@
 const locationLabel = document.getElementById("location-label");
 const inputBox = document.getElementById("location-input");
 const submit = document.getElementById("submit");
+const redo = document.getElementById("redo");
 
 // Location generating function
 async function localGen (userInput) {
@@ -99,7 +100,8 @@ async function callAndDisplay (userInput) {
     displayWeather(weatherData);
 }
 
-// Event listeners
+// // Event listeners
+// Submit button event listener to take in user input
 submit.addEventListener("click", async function () {
     // If function to return an alert if user had not inputted a location.
     if (inputBox.value === "") {
@@ -111,9 +113,26 @@ submit.addEventListener("click", async function () {
     // Resets the inputted value
     inputBox.value = "";
     // Change submit to re-submit
-    submit.textContent = "Re-submit";
-    submit.id = "re-submit";
+    submit.style.display = "none";
+    // Make redo inline
+    redo.style.display = "inline";
+    // // Add redo image src
+    // redo.src = "redo.png";
 })
+
+// Redo button event listener to allow new location
+redo.addEventListener("click"), function () {
+    // // Remove redo image src
+    // redo.src = "";
+    // Un-display redo
+    redo.style.disply = "none";
+    // Change header text back, removing user location
+    locationLabel.textContent = "Location: ";
+    // Un-remove input box
+    inputBox.style.display = "inline"
+    // Un-remove submit button
+    submit.style.display = "inline"
+}
 
 
 
