@@ -8,7 +8,13 @@ const submit = document.getElementById("submit");
 // Header redo image tag variable
 const redo = document.getElementById("redo");
 // Header weather image type variable
-const weatherImage = document.getElementById("weather-image");
+const headerImage = document.getElementById("weather-image");
+// Today weather image type variable
+const todayImage = document.getElementById("today-image")
+// Yesterdays weather image type vraiable
+const yesterdayImage = document.getElementById("yesterday-image")
+// Tomorrows weather image type vraiable
+const tomorrowImage = document.getElementById("tomorrow-image")
 
 // Location generating function
 async function localGen (userInput) {
@@ -40,40 +46,93 @@ function headerDisplayWeather (weatherData) {
     // Set the headerTemp id to a const
     const headerTemp = document.getElementById("headerTemp");
     // Change the text content of the headerTemp id to the current temp
-    headerTemp.textContent = `${weatherData.current_weather.temperature}`;
+    headerTemp.textContent = `${weatherData.current_weather.temperature}  	\xB0C`;
     // Call weather image type setter
-    weatherImageSetter(weatherData.current_weather.weathercode)
+    weatherImageSetter("header", weatherData.current_weather.weathercode)
     // Case correction on inputted value to a variable
     const locationName = caseFixer(inputBox.value)
     // Add user location to header
     locationLabel.textContent += locationName;
     // Remove input box
     inputBox.style.display = "none";
-}
+};
 
 // Body weather displaying function. Multi-purpose, i.e. can be used for different days
 function bodyDisplay (day, weatherData) {
-    // 
-}
+    // Variable to load information depending on the if statement result
+    let dayIndex = 1;
+    let theDay = "";
 
-function weatherImageSetter (weatherCode) {
+    // If statement to decide which day the information is being loaded for
+    if (day === "yesterday") {
+        dayIndex = 0;
+        theDay = "yesterday";
+    } else if (day === "tomorrow") {
+        dayIndex = 2;
+        theDay = "tomorrow";
+    } else if (day === "today") {
+        theDay = "today";
+    }
+    
+    //Variable to shorten data name
+    const data = weatherData.daily;
+    // Variables declared for each info HTML location
+    // Set text content to appropriate API info
+    weatherImageSetter(`${theDay}`, data.weathercode[dayIndex]);
+    const maxTemp = document.getElementById(`${theDay}-max-temp`);
+    maxTemp.textContent = data.temperature_2m_max[dayIndex];
+    const minTemp = document.getElementById(`${theDay}-min-temp`);
+    minTemp.textContent = data.temperature_2m_min[dayIndex];
+    const maxApTemp = document.getElementById(`${theDay}-max-a-temp`);
+    maxApTemp.textContent = data.apparent_temperature_max[dayIndex];
+    const minApTemp = document.getElementById(`${theDay}-min-a-temp`);
+    minApTemp.textContent = data.apparent_temperature_min[dayIndex];
+    const rainChance = document.getElementById(`${theDay}-rain-chance`);
+    rainChance.textContent = data.precipitation_probability_max[dayIndex];
+    const windSpeed = document.getElementById(`${theDay}-wind-speed`);
+    windSpeed.textContent = data.windspeed_10m_max[dayIndex];
+    const sunrise = document.getElementById(`${theDay}-sunrise`);
+    sunrise.textContent = data.sunrise[dayIndex].substr(11,5);
+    const sunset = document.getElementById(`${theDay}-sunset`);
+    sunset.textContent = data.sunset[dayIndex].substr(11,5);
+};
+
+function weatherImageSetter (imageLocal, weatherCode) {
+    // Variables to use when deciding which image src is updated
+    let image
+
+    // Switch statement to decide which image to update
+    switch (imageLocal) {
+        case "header":
+            image = headerImage;
+            break;
+        case "today":
+            image = todayImage;
+            break;
+        case "yesterday":
+            image = yesterdayImage;
+            break;
+        case "tomorrow":
+            image = tomorrowImage;
+            break;
+    }
     // Sets the img src to a png
     // Switch function to set image depending on the weather code
     switch (weatherCode) {
         // Sunny
         case 0:
-            weatherImage.src = "sun.png";
+            image.src = "sun.png";
             break;
         // Cloudy
         case 1:
         case 2:
         case 3:
-            weatherImage.src = "partly-cloudy-day.png";
+            image.src = "partly-cloudy-day.png";
             break;
         // Foggy or Hazay
         case 45:
         case 48:
-            weatherImage.src = "haze.png";
+            image.src = "haze.png";
             break;
         // Raining
         case 51:
@@ -89,7 +148,7 @@ function weatherImageSetter (weatherCode) {
         case 80:
         case 81:
         case 82:
-            weatherImage.src = "rain.png";
+            image.src = "rain.png";
             break;
         // Snowing
         case 71:
@@ -97,17 +156,17 @@ function weatherImageSetter (weatherCode) {
         case 75:
         case 85:
         case 86:
-            weatherImage.src = "snow.png";
+            image.src = "snow.png";
             break;
         // Hail
         case 77:
-            weatherImage.src = "hail.png";
+            image.src = "hail.png";
             break;
         // Storm
         case 95:
         case 96:
         case 99:
-            weatherImage.src = "storm.png";
+            image.src = "storm.png";
             break;
     }
 }
@@ -131,6 +190,9 @@ async function callAndDisplay (userInput) {
     const weatherData = await weatherFetch(latiLong);
     // Calls the display function to update the DOM with user weather
     headerDisplayWeather(weatherData);
+    await bodyDisplay("today", weatherData);
+    await bodyDisplay("yesterday", weatherData);
+    await bodyDisplay("tomorrow", weatherData);
 }
 
 // // Event listeners
