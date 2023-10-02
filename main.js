@@ -21,7 +21,8 @@ async function localGen (userInput) {
 
 // Weather fetching function
 async function weatherFetch(latiLong) {
-    const response = await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latiLong[0]}&longitude=${latiLong[1]}&current_weather=true&forecast_days=1`);
+   // const response = await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latiLong[0]}&longitude=${latiLong[1]}&current_weather=true&forecast_days=1`);
+    const response = await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latiLong[0]}&longitude=${latiLong[1]}&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,precipitation_probability_max,windspeed_10m_max&current_weather=true&timezone=auto&past_days=1&forecast_days=3`)
 
     if (!response.ok) {
         alert(`Request error. Status: ${response.status}`);
@@ -35,7 +36,7 @@ async function weatherFetch(latiLong) {
 }
 
 // Display function
-function displayWeather (weatherData) {
+function headerDisplayWeather (weatherData) {
     // Set the headerTemp id to a const
     const headerTemp = document.getElementById("headerTemp");
     // Change the text content of the headerTemp id to the current temp
@@ -49,6 +50,9 @@ function displayWeather (weatherData) {
     // Remove input box
     inputBox.style.display = "none";
 }
+
+// Body weather displaying function. Multi-purpose, i.e. can be used for different days
+
 
 function weatherImageSetter (weatherCode) {
     // Sets the img src to a png
@@ -124,7 +128,7 @@ async function callAndDisplay (userInput) {
     // Put user location latiLong into the weatherFetch function to generate weather data.
     const weatherData = await weatherFetch(latiLong);
     // Calls the display function to update the DOM with user weather
-    displayWeather(weatherData);
+    headerDisplayWeather(weatherData);
 }
 
 // // Event listeners

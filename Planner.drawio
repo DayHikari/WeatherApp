@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="pwrnCCXdlygUe7S9XfU-" name="Design Outline">
-        <mxGraphModel dx="812" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1308" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -329,57 +329,63 @@
         </mxGraphModel>
     </diagram>
     <diagram id="-NgrC8shHHIZitDW6hXY" name="Daily Sprint">
-        <mxGraphModel dx="812" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1599" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-1" value="Daily Information Spring" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" vertex="1" parent="1">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-1" value="Daily Information Spring" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" parent="1" vertex="1">
                     <mxGeometry x="130" y="40" width="500" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-5" value="" style="edgeStyle=none;html=1;fontSize=13;" edge="1" parent="1" source="vLLz2N2PEIo-5bt03SZy-2" target="vLLz2N2PEIo-5bt03SZy-4">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-5" value="" style="edgeStyle=none;html=1;fontSize=13;" parent="1" source="vLLz2N2PEIo-5bt03SZy-2" target="vLLz2N2PEIo-5bt03SZy-4" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-2" value="Gather weather information details of interest to be assigned to the daily.&lt;br&gt;Create a table in this planner" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" vertex="1" parent="1">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-2" value="Gather weather information details of interest to be assigned to the daily.&lt;br&gt;Create a table in this planner" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="160" y="80" width="440" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-7" value="" style="edgeStyle=none;html=1;fontSize=13;" edge="1" parent="1" source="vLLz2N2PEIo-5bt03SZy-4" target="vLLz2N2PEIo-5bt03SZy-6">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-7" value="" style="edgeStyle=none;html=1;fontSize=13;" parent="1" source="vLLz2N2PEIo-5bt03SZy-4" target="vLLz2N2PEIo-5bt03SZy-6" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-4" value="Create new API URL based on the new information required." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" vertex="1" parent="1">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-4" value="Create new API URL based on the new information required." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="160" y="160" width="440" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-9" value="" style="edgeStyle=none;html=1;fontSize=13;" edge="1" parent="1" source="vLLz2N2PEIo-5bt03SZy-6" target="vLLz2N2PEIo-5bt03SZy-8">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-9" value="" style="edgeStyle=none;html=1;fontSize=13;" parent="1" source="vLLz2N2PEIo-5bt03SZy-6" target="vLLz2N2PEIo-5bt03SZy-8" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-6" value="Review the API object and update the information table with the info pathways" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" vertex="1" parent="1">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-6" value="Review the API object and update the information table with the info pathways" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="160" y="240" width="440" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-11" value="" style="edgeStyle=none;html=1;fontSize=13;" edge="1" parent="1" source="vLLz2N2PEIo-5bt03SZy-8" target="vLLz2N2PEIo-5bt03SZy-10">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-11" value="" style="edgeStyle=none;html=1;fontSize=13;" parent="1" source="vLLz2N2PEIo-5bt03SZy-8" target="vLLz2N2PEIo-5bt03SZy-10" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-8" value="HTML: Update the daily sections to include a header for each piece of information and an accompanying paragraph. Set initial paragraph to &quot;Awaiting location&quot;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" vertex="1" parent="1">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-8" value="HTML: Update the daily sections to include a header for each piece of information and an accompanying paragraph. Set initial paragraph to &quot;Awaiting location&quot;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="160" y="320" width="440" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-13" value="" style="edgeStyle=none;html=1;fontSize=13;" edge="1" parent="1" source="vLLz2N2PEIo-5bt03SZy-10" target="vLLz2N2PEIo-5bt03SZy-12">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-13" value="" style="edgeStyle=none;html=1;fontSize=13;" parent="1" source="vLLz2N2PEIo-5bt03SZy-10" target="vLLz2N2PEIo-5bt03SZy-12" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-10" value="CSS: Set the daily containers to grid display with 2 columns to fix pairing. Set the header and image for weather type to take whole row." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" vertex="1" parent="1">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-10" value="CSS: Set the daily containers to grid display with 2 columns to fix pairing. Set the header and image for weather type to take whole row." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="160" y="400" width="440" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-15" value="" style="edgeStyle=none;html=1;fontSize=13;" edge="1" parent="1" source="vLLz2N2PEIo-5bt03SZy-12" target="vLLz2N2PEIo-5bt03SZy-14">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-15" value="" style="edgeStyle=none;html=1;fontSize=13;" parent="1" source="vLLz2N2PEIo-5bt03SZy-12" target="vLLz2N2PEIo-5bt03SZy-14" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-12" value="JS: Create function to update the daily information. Function should take weather data and day. If statement depending on the day inputted to change the information gathered and displayed." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" vertex="1" parent="1">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-12" value="JS: Create function to update the daily information. Function should take weather data and day. If statement depending on the day inputted to change the information gathered and displayed." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="160" y="480" width="440" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-17" value="" style="edgeStyle=none;html=1;fontSize=13;" edge="1" parent="1" source="vLLz2N2PEIo-5bt03SZy-14" target="vLLz2N2PEIo-5bt03SZy-16">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-17" value="" style="edgeStyle=none;html=1;fontSize=13;" parent="1" source="vLLz2N2PEIo-5bt03SZy-14" target="vLLz2N2PEIo-5bt03SZy-16" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-14" value="JS: Update the weather type function to also take the day so that the single function can update all sections." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" vertex="1" parent="1">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-14" value="JS: Update the weather type function to also take the day so that the single function can update all sections." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="160" y="560" width="440" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="vLLz2N2PEIo-5bt03SZy-16" value="Update callAndDisplay function to include new functions and additional information needed." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" vertex="1" parent="1">
+                <mxCell id="vLLz2N2PEIo-5bt03SZy-16" value="Update callAndDisplay function to include new functions and additional information needed." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="160" y="640" width="440" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="zt29LADaBkaU6sr0mBK9-1" value="Daily weather info&lt;br&gt;&lt;ul&gt;&lt;li&gt;Type of weather&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Maximum Temperature&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Minimum temperature&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Maximum apparent temperature&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Minimum apparent temperature&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Rain chance&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Wind speeds&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Sunrise&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Sunset&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="930" y="70" width="240" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="zt29LADaBkaU6sr0mBK9-2" value="https://api.open-meteo.com/v1/forecast?latitude=52.52&amp;longitude=13.41&amp;daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,precipitation_probability_max,windspeed_10m_max&amp;current_weather=true&amp;timezone=Europe%2FLondon&amp;past_days=1&amp;forecast_days=1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="870" y="660" width="760" height="290" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
