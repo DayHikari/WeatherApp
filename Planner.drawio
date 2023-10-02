@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="pwrnCCXdlygUe7S9XfU-" name="Design Outline">
-        <mxGraphModel dx="1308" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="412" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -276,7 +276,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="M0NWXlINwRQralfYXhiM" name="Mini Header Sprint">
-        <mxGraphModel dx="812" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="412" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -304,7 +304,7 @@
                 <mxCell id="aeLSWF4SkV9iFRgNQgD2-9" value="Save the icons to a file and then use them from the files." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#00FF00;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="340" y="200" width="170" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="TBEnrWoK4V3Nn4ARezI4-2" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="aeLSWF4SkV9iFRgNQgD2-11" target="TBEnrWoK4V3Nn4ARezI4-1">
+                <mxCell id="TBEnrWoK4V3Nn4ARezI4-2" value="" style="edgeStyle=none;html=1;" parent="1" source="aeLSWF4SkV9iFRgNQgD2-11" target="TBEnrWoK4V3Nn4ARezI4-1" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="aeLSWF4SkV9iFRgNQgD2-11" value="Create an if statement either in a new function or in display" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#00FF00;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
@@ -313,23 +313,23 @@
                 <mxCell id="aeLSWF4SkV9iFRgNQgD2-14" value="Icon website to link later at bottom&lt;br&gt;&amp;lt;a target=&quot;_blank&quot; href=&quot;https://icons8.com/icon/tWaanYfjvDq4/partly-cloudy-day&quot;&amp;gt;Partly Cloudy Day&amp;lt;/a&amp;gt; icon by &amp;lt;a target=&quot;_blank&quot; href=&quot;https://icons8.com&quot;&amp;gt;Icons8&amp;lt;/a&amp;gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="810" y="240" width="570" height="240" as="geometry"/>
                 </mxCell>
-                <mxCell id="TBEnrWoK4V3Nn4ARezI4-3" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="TBEnrWoK4V3Nn4ARezI4-1" target="aeLSWF4SkV9iFRgNQgD2-14">
+                <mxCell id="TBEnrWoK4V3Nn4ARezI4-3" value="" style="edgeStyle=none;html=1;" parent="1" source="TBEnrWoK4V3Nn4ARezI4-1" target="aeLSWF4SkV9iFRgNQgD2-14" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="TBEnrWoK4V3Nn4ARezI4-1" value="Switch statement used as a new function" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=13;fillColor=#000000;strokeColor=#00FF00;rounded=0;" vertex="1" parent="1">
+                <mxCell id="TBEnrWoK4V3Nn4ARezI4-1" value="Switch statement used as a new function" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=13;fillColor=#000000;strokeColor=#00FF00;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="490" y="330" width="245" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="TBEnrWoK4V3Nn4ARezI4-4" value="Additional function added to fix casing on the user input before assigning to header" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#00FF00;fillColor=#000000;" vertex="1" parent="1">
+                <mxCell id="TBEnrWoK4V3Nn4ARezI4-4" value="Additional function added to fix casing on the user input before assigning to header" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#00FF00;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="180" y="440" width="280" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="TBEnrWoK4V3Nn4ARezI4-5" value="Added redo image allowing the removal of input and submit button. Clicking redo image brings back the input and submit." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#00FF00;fillColor=#000000;" vertex="1" parent="1">
+                <mxCell id="TBEnrWoK4V3Nn4ARezI4-5" value="Added redo image allowing the removal of input and submit button. Clicking redo image brings back the input and submit." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#00FF00;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="180" y="530" width="280" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="-NgrC8shHHIZitDW6hXY" name="Daily Sprint">
-        <mxGraphModel dx="1599" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="412" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -381,10 +381,10 @@
                 <mxCell id="vLLz2N2PEIo-5bt03SZy-16" value="Update callAndDisplay function to include new functions and additional information needed." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fontSize=13;fillColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="160" y="640" width="440" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="zt29LADaBkaU6sr0mBK9-1" value="Daily weather info&lt;br&gt;&lt;ul&gt;&lt;li&gt;Type of weather&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Maximum Temperature&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Minimum temperature&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Maximum apparent temperature&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Minimum apparent temperature&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Rain chance&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Wind speeds&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Sunrise&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Sunset&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;" vertex="1" parent="1">
+                <mxCell id="zt29LADaBkaU6sr0mBK9-1" value="Daily weather info&lt;br&gt;&lt;ul&gt;&lt;li&gt;Type of weather&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Maximum Temperature&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Minimum temperature&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Maximum apparent temperature&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Minimum apparent temperature&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Rain chance&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Wind speeds&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Sunrise&lt;/li&gt;&lt;li style=&quot;&quot;&gt;Sunset&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;" parent="1" vertex="1">
                     <mxGeometry x="930" y="70" width="240" height="240" as="geometry"/>
                 </mxCell>
-                <mxCell id="zt29LADaBkaU6sr0mBK9-2" value="https://api.open-meteo.com/v1/forecast?latitude=52.52&amp;longitude=13.41&amp;daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,precipitation_probability_max,windspeed_10m_max&amp;current_weather=true&amp;timezone=Europe%2FLondon&amp;past_days=1&amp;forecast_days=1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="zt29LADaBkaU6sr0mBK9-2" value="https://api.open-meteo.com/v1/forecast?latitude=52.52&amp;longitude=13.41&amp;daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,precipitation_probability_max,windspeed_10m_max&amp;current_weather=true&amp;timezone=Europe%2FLondon&amp;past_days=1&amp;forecast_days=1" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="870" y="660" width="760" height="290" as="geometry"/>
                 </mxCell>
             </root>

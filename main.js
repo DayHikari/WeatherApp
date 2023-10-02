@@ -52,7 +52,9 @@ function headerDisplayWeather (weatherData) {
 }
 
 // Body weather displaying function. Multi-purpose, i.e. can be used for different days
-
+function bodyDisplay (day, weatherData) {
+    // 
+}
 
 function weatherImageSetter (weatherCode) {
     // Sets the img src to a png
