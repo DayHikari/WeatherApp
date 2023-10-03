@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="pwrnCCXdlygUe7S9XfU-" name="Design Outline">
-        <mxGraphModel dx="412" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1308" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -391,15 +391,15 @@
         </mxGraphModel>
     </diagram>
     <diagram id="KRiCIlBdPpJr10u0LGFm" name="Bugs">
-        <mxGraphModel dx="412" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1308" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="21CiFUk3deN8TizrnJPc-1" value="&lt;ul&gt;&lt;li&gt;Case corrector does not work for locations with 2 words (e.g. New York)&lt;/li&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-                    <mxGeometry x="100" y="140" width="220" height="220" as="geometry"/>
+                <mxCell id="21CiFUk3deN8TizrnJPc-1" value="&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#00ff00&quot;&gt;Case corrector does not work for locations with 2 words (e.g. New York)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="140" width="500" height="220" as="geometry"/>
                 </mxCell>
-                <mxCell id="21CiFUk3deN8TizrnJPc-2" value="Bugs" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=19;" vertex="1" parent="1">
-                    <mxGeometry x="170" y="80" width="60" height="30" as="geometry"/>
+                <mxCell id="21CiFUk3deN8TizrnJPc-2" value="Bugs" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=19;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="80" width="60" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

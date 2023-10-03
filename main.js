@@ -173,12 +173,40 @@ function weatherImageSetter (imageLocal, weatherCode) {
 
 // Function to put proper case on user input
 function caseFixer (location) {
-    // Convert string to an array all in lower case
-    const letterArray = location.toLowerCase().split("");
-    // Set the first letter in the array to uppercase
-    letterArray[0] = letterArray[0].toUpperCase();
-    // Join the array into a string with no commas and return
-    return letterArray.join("");
+    // Variable for the final concatted name
+    let correctName = "";
+    // Variable for the location name split at any spaces
+    let nameArray = [];
+    console.log(location);
+    // If statement to split the location name at spaces and assign to nameArray, or just assign the location name.
+    if (location.indexOf(" ") >= 0) {
+        nameArray = location.toLowerCase().split(" ");
+    } else {
+        nameArray = [location.toLowerCase()];
+    }
+    console.log(nameArray);
+    // For loop to cycle through any/all indexes in nameArray
+    for (let i = 0; i < nameArray.length; i++) {
+        // If statement so that the first location word is added straight to correctName variable after have the case corrected
+        if (i === 0) {
+            // Splits the first word into letter
+            const letterArray = nameArray[i].split("");
+            // Changes first letter to a capital letter
+            letterArray[0] = letterArray[0].toUpperCase();
+            // Sets correct name to the re-joined first word of the location which now has correct cases
+            correctName = letterArray.join("");
+        } else { /* Else section is to perform the same as above but adding a space at the beginning of the word*/
+            // Splits the current index word to letter in letterArray
+            const letterArray = nameArray[i].split("");
+            // Changes the first letter in the array to capital
+            letterArray[0] = letterArray[0].toUpperCase();
+            // Concats the corrected word onto the correctName variable with a space to separate words.
+            correctName += ` ${letterArray.join("")}`;
+        }
+    }
+
+    // Return the concatted case correct name
+    return correctName;
 }
 
 
@@ -216,7 +244,7 @@ submit.addEventListener("click", async function () {
 })
 
 // Redo button event listener to allow new location
-redo.addEventListener("click"), function () {
+redo.addEventListener("click", function () {
     // // Remove redo image src
     // redo.src = "";
     // Un-display redo
@@ -227,7 +255,7 @@ redo.addEventListener("click"), function () {
     inputBox.style.display = "inline"
     // Un-remove submit button
     submit.style.display = "inline"
-}
+})
 
 
 
