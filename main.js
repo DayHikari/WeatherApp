@@ -1,27 +1,37 @@
 // // Variable location
 // Header label variable
 const locationLabel = document.getElementById("location-label");
+
 // Header location input variable
 const inputBox = document.getElementById("location-input");
+
 // Header submit button variable
 const submit = document.getElementById("submit");
+
 // Header redo image tag variable
 const redo = document.getElementById("redo");
+
 // Header weather image type variable
 const headerImage = document.getElementById("weather-image");
+
 // Today weather image type variable
-const todayImage = document.getElementById("today-image")
+const todayImage = document.getElementById("today-image");
+
 // Yesterdays weather image type vraiable
-const yesterdayImage = document.getElementById("yesterday-image")
+const yesterdayImage = document.getElementById("yesterday-image");
+
 // Tomorrows weather image type vraiable
-const tomorrowImage = document.getElementById("tomorrow-image")
+const tomorrowImage = document.getElementById("tomorrow-image");
 
 // Location generating function
 async function localGen (userInput) {
     const response = await fetch (`https://geocoding-api.open-meteo.com/v1/search?name=${userInput}&count=1&language=en&format=json`);
+
     const localData = await response.json();
+
     // console.log(localData)
-    const latiLong = [localData.results[0].latitude.toString(), localData.results[0].longitude.toString()]    
+    const latiLong = [localData.results[0].latitude.toString(), localData.results[0].longitude.toString()];
+
     return latiLong;
 }
 
@@ -32,12 +42,16 @@ async function weatherFetch(latiLong) {
 
     if (!response.ok) {
         alert(`Request error. Status: ${response.status}`);
+
         console.error(`status: ${response.status}`);
+
         console.error(`text: ${await response.text()}`);
+
         return;
     }
 
     const weatherData = await response.json();
+    
     return weatherData;
 }
 
@@ -45,20 +59,26 @@ async function weatherFetch(latiLong) {
 function headerDisplayWeather (weatherData) {
     // Set the headerTemp id to a const
     const headerTemp = document.getElementById("headerTemp");
+
     // Change the text content of the headerTemp id to the current temp
     headerTemp.textContent = `${weatherData.current_weather.temperature}  	\xB0C`;
+
     // Call weather image type setter
     weatherImageSetter("header", weatherData.current_weather.weathercode)
+
     // Case correction on inputted value to a variable
     const locationName = caseFixer(inputBox.value)
+
     // Add user location to header
     locationLabel.textContent += locationName;
+
     // Remove input box
     inputBox.style.display = "none";
 };
 
 // Body weather displaying function. Multi-purpose, i.e. can be used for different days
 function bodyDisplay (day, weatherData) {
+
     // Variable to load information depending on the if statement result
     let dayIndex = 1;
     let theDay = "";
@@ -76,30 +96,39 @@ function bodyDisplay (day, weatherData) {
     
     //Variable to shorten data name
     const data = weatherData.daily;
+
     // Variables declared for each info HTML location
     // Set text content to appropriate API info
     weatherImageSetter(`${theDay}`, data.weathercode[dayIndex]);
+
     const maxTemp = document.getElementById(`${theDay}-max-temp`);
     maxTemp.textContent = data.temperature_2m_max[dayIndex];
+
     const minTemp = document.getElementById(`${theDay}-min-temp`);
     minTemp.textContent = data.temperature_2m_min[dayIndex];
+
     const maxApTemp = document.getElementById(`${theDay}-max-a-temp`);
     maxApTemp.textContent = data.apparent_temperature_max[dayIndex];
+
     const minApTemp = document.getElementById(`${theDay}-min-a-temp`);
     minApTemp.textContent = data.apparent_temperature_min[dayIndex];
+
     const rainChance = document.getElementById(`${theDay}-rain-chance`);
     rainChance.textContent = data.precipitation_probability_max[dayIndex];
+
     const windSpeed = document.getElementById(`${theDay}-wind-speed`);
     windSpeed.textContent = data.windspeed_10m_max[dayIndex];
+
     const sunrise = document.getElementById(`${theDay}-sunrise`);
     sunrise.textContent = data.sunrise[dayIndex].substr(11,5);
+
     const sunset = document.getElementById(`${theDay}-sunset`);
     sunset.textContent = data.sunset[dayIndex].substr(11,5);
 };
 
 function weatherImageSetter (imageLocal, weatherCode) {
     // Variables to use when deciding which image src is updated
-    let image
+    let image;
 
     // Switch statement to decide which image to update
     switch (imageLocal) {
@@ -115,7 +144,8 @@ function weatherImageSetter (imageLocal, weatherCode) {
         case "tomorrow":
             image = tomorrowImage;
             break;
-    }
+    };
+
     // Sets the img src to a png
     // Switch function to set image depending on the weather code
     switch (weatherCode) {
@@ -175,31 +205,37 @@ function weatherImageSetter (imageLocal, weatherCode) {
 function caseFixer (location) {
     // Variable for the final concatted name
     let correctName = "";
+
     // Variable for the location name split at any spaces
     let nameArray = [];
-    console.log(location);
+
     // If statement to split the location name at spaces and assign to nameArray, or just assign the location name.
     if (location.indexOf(" ") >= 0) {
         nameArray = location.toLowerCase().split(" ");
     } else {
         nameArray = [location.toLowerCase()];
     }
-    console.log(nameArray);
+    
     // For loop to cycle through any/all indexes in nameArray
     for (let i = 0; i < nameArray.length; i++) {
         // If statement so that the first location word is added straight to correctName variable after have the case corrected
         if (i === 0) {
             // Splits the first word into letter
             const letterArray = nameArray[i].split("");
+
             // Changes first letter to a capital letter
             letterArray[0] = letterArray[0].toUpperCase();
+
             // Sets correct name to the re-joined first word of the location which now has correct cases
             correctName = letterArray.join("");
+
         } else { /* Else section is to perform the same as above but adding a space at the beginning of the word*/
             // Splits the current index word to letter in letterArray
             const letterArray = nameArray[i].split("");
+
             // Changes the first letter in the array to capital
             letterArray[0] = letterArray[0].toUpperCase();
+
             // Concats the corrected word onto the correctName variable with a space to separate words.
             correctName += ` ${letterArray.join("")}`;
         }
@@ -214,12 +250,17 @@ function caseFixer (location) {
 async function callAndDisplay (userInput) {
     // Using user inputted location, generate latitude and longitude and se to latiLong.
     const latiLong = await localGen(userInput);
+
     // Put user location latiLong into the weatherFetch function to generate weather data.
     const weatherData = await weatherFetch(latiLong);
+
     // Calls the display function to update the DOM with user weather
     headerDisplayWeather(weatherData);
+
     await bodyDisplay("today", weatherData);
+
     await bodyDisplay("yesterday", weatherData);
+
     await bodyDisplay("tomorrow", weatherData);
 }
 
@@ -230,32 +271,35 @@ submit.addEventListener("click", async function () {
     if (inputBox.value === "") {
         alert("Please input a location");
         return;
-    }
+    };
+
     // Calls the callAndDisplay function with user location
     await callAndDisplay(inputBox.value);
+
     // Resets the inputted value
     inputBox.value = "";
+
     // Change submit to re-submit
     submit.style.display = "none";
+
     // Make redo inline
     redo.style.display = "inline";
-    // // Add redo image src
-    // redo.src = "redo.png";
-})
+});
 
 // Redo button event listener to allow new location
 redo.addEventListener("click", function () {
-    // // Remove redo image src
-    // redo.src = "";
     // Un-display redo
     redo.style.disply = "none";
+
     // Change header text back, removing user location
     locationLabel.textContent = "Location: ";
+
     // Un-remove input box
     inputBox.style.display = "inline"
+
     // Un-remove submit button
     submit.style.display = "inline"
-})
+});
 
 
 

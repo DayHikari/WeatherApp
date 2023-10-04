@@ -1,96 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day's Weather App</title>
-    <link rel="stylesheet" href="styles.CSS"/>
-</head>
-<body>
+    <link rel="stylesheet" href="styles.CSS" />
+  </head>
+  <body>
     <header>
-        <div id="header">
-            <div id="user-input">
-                <label id="location-label">User Location: </label>
-                <input type="text" id="location-input"/>
-                <button id="submit">Submit</button>
-                <a href=""><img src="redo.png" id="redo"/></a>
-            </div>
-            <div id="header-info">
-                <p>Temperature:</p>
-                <div class="gap-1"></div>
-                <p id="headerTemp">Awaiting user input</p>
-                <div class="gap-2"></div>
-                <img src="" id="weather-image"/>
-            </div>
+      <div id="header">
+        <div id="user-input">
+          <label id="location-label">User Location: </label>
+          <input type="text" id="location-input" />
+          <button id="submit">Submit</button>
+          <a href=""><img src="redo.png" id="redo" /></a>
         </div>
+        <div id="header-info">
+          <p>Temperature:</p>
+          <div class="gap-1"></div>
+          <p id="headerTemp">Awaiting user input</p>
+          <div class="gap-2"></div>
+          <img src="" id="weather-image" />
+        </div>
+      </div>
     </header>
     <main>
-        <div id="content">
-            <div class="daily-section">
-                <div id="yesterday-info" class="daily-weather">
-                    <h2 id="yesterday-title" class="daily-titles">Yesterday's Weather</h2>
-                    <img src="" id="yesterday-image" class="daily-image"/>
-                    <h4 class="daily-headers">Max Temperature:</h4>
-                    <p id="yesterday-max-temp" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Min Temperature:</h4>
-                    <p id="yesterday-min-temp" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Max Apparent Temperature:</h4>
-                    <p id="yesterday-max-a-temp" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Min Apparent Temperature:</h4>
-                    <p id="yesterday-min-a-temp" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Rain Chance:</h4>
-                    <p id="yesterday-rain-chance" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Wind Speed:</h4>
-                    <p id="yesterday-wind-speed" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Sunrise:</h4>
-                    <p id="yesterday-sunrise" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Sunset:</h4>
-                    <p id="yesterday-sunset" class="daily-text">Awaiting user input</p>
-                </div>
-                <div id="today-info" class="daily-weather">
-                    <h2 id="today-title" class="daily-titles">Today's Weather</h2>
-                    <img src="" id="today-image" class="daily-image"/>
-                    <h4 class="daily-headers">Max Temperature:</h4>
-                    <p id="today-max-temp" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Min Temperature:</h4>
-                    <p id="today-min-temp" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Max Apparent Temperature:</h4>
-                    <p id="today-max-a-temp" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Min Apparent Temperature:</h4>
-                    <p id="today-min-a-temp" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Rain Chance:</h4>
-                    <p id="today-rain-chance" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Wind Speed:</h4>
-                    <p id="today-wind-speed" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Sunrise:</h4>
-                    <p id="today-sunrise" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Sunset:</h4>
-                    <p id="today-sunset" class="daily-text">Awaiting user input</p>
-                </div>
-                <div id="tomorrow-info" class="daily-weather">
-                    <h2 id="tomorrow-title" class="daily-titles">Tomorrow's Weather</h2>
-                    <img src="" id="tomorrow-image" class="daily-image"/>
-                    <h4 class="daily-headers">Max Temperature:</h4>
-                    <p id="tomorrow-max-temp" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Min Temperature:</h4>
-                    <p id="tomorrow-min-temp" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Max Apparent Temperature:</h4>
-                    <p id="tomorrow-max-a-temp" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Min Apparent Temperature:</h4>
-                    <p id="tomorrow-min-a-temp" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Rain Chance:</h4>
-                    <p id="tomorrow-rain-chance" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Wind Speed:</h4>
-                    <p id="tomorrow-wind-speed" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Sunrise:</h4>
-                    <p id="tomorrow-sunrise" class="daily-text">Awaiting user input</p>
-                    <h4 class="daily-headers">Sunset:</h4>
-                    <p id="tomorrow-sunset" class="daily-text">Awaiting user input</p>
-
-                </div>
-            </div>
+      <div id="content">
+        <div class="daily-section">
+          <div id="yesterday-info" class="daily-weather">
+            <h2 id="yesterday-title" class="daily-titles">
+              Yesterday's Weather
+            </h2>
+            <img src="" id="yesterday-image" class="daily-image" />
+            <h4 class="daily-headers">Max Temperature:</h4>
+            <p id="yesterday-max-temp" class="daily-text">
+              Awaiting user input
+            </p>
+            <h4 class="daily-headers">Min Temperature:</h4>
+            <p id="yesterday-min-temp" class="daily-text">
+              Awaiting user input
+            </p>
+            <h4 class="daily-headers">Max Apparent Temperature:</h4>
+            <p id="yesterday-max-a-temp" class="daily-text">
+              Awaiting user input
+            </p>
+            <h4 class="daily-headers">Min Apparent Temperature:</h4>
+            <p id="yesterday-min-a-temp" class="daily-text">
+              Awaiting user input
+            </p>
+            <h4 class="daily-headers">Rain Chance:</h4>
+            <p id="yesterday-rain-chance" class="daily-text">
+              Awaiting user input
+            </p>
+            <h4 class="daily-headers">Wind Speed:</h4>
+            <p id="yesterday-wind-speed" class="daily-text">
+              Awaiting user input
+            </p>
+            <h4 class="daily-headers">Sunrise:</h4>
+            <p id="yesterday-sunrise" class="daily-text">Awaiting user input</p>
+            <h4 class="daily-headers">Sunset:</h4>
+            <p id="yesterday-sunset" class="daily-text">Awaiting user input</p>
+          </div>
+          <div id="today-info" class="daily-weather">
+            <h2 id="today-title" class="daily-titles">Today's Weather</h2>
+            <img src="" id="today-image" class="daily-image" />
+            <h4 class="daily-headers">Max Temperature:</h4>
+            <p id="today-max-temp" class="daily-text">Awaiting user input</p>
+            <h4 class="daily-headers">Min Temperature:</h4>
+            <p id="today-min-temp" class="daily-text">Awaiting user input</p>
+            <h4 class="daily-headers">Max Apparent Temperature:</h4>
+            <p id="today-max-a-temp" class="daily-text">Awaiting user input</p>
+            <h4 class="daily-headers">Min Apparent Temperature:</h4>
+            <p id="today-min-a-temp" class="daily-text">Awaiting user input</p>
+            <h4 class="daily-headers">Rain Chance:</h4>
+            <p id="today-rain-chance" class="daily-text">Awaiting user input</p>
+            <h4 class="daily-headers">Wind Speed:</h4>
+            <p id="today-wind-speed" class="daily-text">Awaiting user input</p>
+            <h4 class="daily-headers">Sunrise:</h4>
+            <p id="today-sunrise" class="daily-text">Awaiting user input</p>
+            <h4 class="daily-headers">Sunset:</h4>
+            <p id="today-sunset" class="daily-text">Awaiting user input</p>
+          </div>
+          <div id="tomorrow-info" class="daily-weather">
+            <h2 id="tomorrow-title" class="daily-titles">Tomorrow's Weather</h2>
+            <img src="" id="tomorrow-image" class="daily-image" />
+            <h4 class="daily-headers">Max Temperature:</h4>
+            <p id="tomorrow-max-temp" class="daily-text">Awaiting user input</p>
+            <h4 class="daily-headers">Min Temperature:</h4>
+            <p id="tomorrow-min-temp" class="daily-text">Awaiting user input</p>
+            <h4 class="daily-headers">Max Apparent Temperature:</h4>
+            <p id="tomorrow-max-a-temp" class="daily-text">
+              Awaiting user input
+            </p>
+            <h4 class="daily-headers">Min Apparent Temperature:</h4>
+            <p id="tomorrow-min-a-temp" class="daily-text">
+              Awaiting user input
+            </p>
+            <h4 class="daily-headers">Rain Chance:</h4>
+            <p id="tomorrow-rain-chance" class="daily-text">
+              Awaiting user input
+            </p>
+            <h4 class="daily-headers">Wind Speed:</h4>
+            <p id="tomorrow-wind-speed" class="daily-text">
+              Awaiting user input
+            </p>
+            <h4 class="daily-headers">Sunrise:</h4>
+            <p id="tomorrow-sunrise" class="daily-text">Awaiting user input</p>
+            <h4 class="daily-headers">Sunset:</h4>
+            <p id="tomorrow-sunset" class="daily-text">Awaiting user input</p>
+          </div>
         </div>
+
+        <div id="seven-day-forcast-section">
+          <div id="seven-day-holder">
+            <a href="#day0" id="day0" class="sevenDayA">
+              <div id="day0-div" class="sevenDays">
+                <h4 id="day0-date"></h4>
+                <img src="" id="day0-image" />
+                <p id="day0-temp"></p>
+                <p id="day0-rain"></p>
+                <p id="day0-details">Click for more details.</p>
+              </div>
+            </a>
+            <a href="#day1" id="day1" class="sevenDayA">
+              <div id="day1-div" class="sevenDays">
+                <h4 id="day1-date"></h4>
+                <img src="" id="day1-image" />
+                <p id="day1-temp"></p>
+                <p id="day1-rain"></p>
+                <p id="day1-details">Click for more details.</p>
+              </div>
+            </a>
+            <a href="#day2" id="day2" class="sevenDayA">
+              <div id="day2-div" class="sevenDays">
+                <h4 id="day2-date"></h4>
+                <img src="" id="day2-image" />
+                <p id="day2-temp"></p>
+                <p id="day2-rain"></p>
+                <p id="day2-details">Click for more details.</p>
+              </div>
+            </a>
+            <a href="#day3" id="day3" class="sevenDayA">
+              <div id="day3-div" class="sevenDays">
+                <h4 id="day3-date"></h4>
+                <img src="" id="day3-image" />
+                <p id="day3-temp"></p>
+                <p id="day3-rain"></p>
+                <p id="day3-details">Click for more details.</p>
+              </div>
+            </a>
+            <a href="#day4" id="day4" class="sevenDayA">
+              <div id="day4-div" class="sevenDays">
+                <h4 id="day4-date"></h4>
+                <img src="" id="day4-image" />
+                <p id="day4-temp"></p>
+                <p id="day4-rain"></p>
+                <p id="day4-details">Click for more details.</p>
+              </div>
+            </a>
+            <a href="#day5" id="day5" class="sevenDayA">
+              <div id="day5-div" class="sevenDays">
+                <h4 id="day5-date"></h4>
+                <img src="" id="day5-image" />
+                <p id="day5-temp"></p>
+                <p id="day5-rain"></p>
+                <p id="day5-details">Click for more details.</p>
+              </div>
+            </a>
+            <a href="#day6" id="day6" class="sevenDayA">
+              <div id="day6-div" class="sevenDays">
+                <h4 id="day6-date"></h4>
+                <img src="" id="day6-image" />
+                <p id="day6-temp"></p>
+                <p id="day6-rain"></p>
+                <p id="day6-details">Click for more details.</p>
+              </div>
+            </a>
+          </div>
+          <div id="overview-info">
+            <h3 id="overview-date"></h3>
+            <div id="overview-sunrise-div">
+              <img src="sunrise.png" alt="sunrise" />
+              <h4 id="overview-sunrise-time"></h4>
+            </div>
+            <div id="overview-sunset-div">
+              <img src="sunset.png" alt="sunset" />
+              <h4 id="overview-sunset-time"></h4>
+            </div>
+            <div id="hourly-time">
+              <h4 class="hourly-info">00:00</h4>
+              <h4 class="hourly-info">01:00</h4>
+              <h4 class="hourly-info">02:00</h4>
+              <h4 class="hourly-info">03:00</h4>
+              <h4 class="hourly-info">04:00</h4>
+              <h4 class="hourly-info">05:00</h4>
+              <h4 class="hourly-info">06:00</h4>
+              <h4 class="hourly-info">07:00</h4>
+              <h4 class="hourly-info">08:00</h4>
+              <h4 class="hourly-info">09:00</h4>
+              <h4 class="hourly-info">10:00</h4>
+              <h4 class="hourly-info">11:00</h4>
+              <h4 class="hourly-info">12:00</h4>
+              <h4 class="hourly-info">13:00</h4>
+              <h4 class="hourly-info">14:00</h4>
+              <h4 class="hourly-info">15:00</h4>
+              <h4 class="hourly-info">16:00</h4>
+              <h4 class="hourly-info">17:00</h4>
+              <h4 class="hourly-info">18:00</h4>
+              <h4 class="hourly-info">19:00</h4>
+              <h4 class="hourly-info">20:00</h4>
+              <h4 class="hourly-info">21:00</h4>
+              <h4 class="hourly-info">22:00</h4>
+              <h4 class="hourly-info">23:00</h4>
+            </div>
+            <div id="hourly-temp">
+                <h4 class="overview-subtitle">Hourly Temperature</h4>
+                <h4 id="temp0" class="hourly-info"></h4>
+                <h4 id="temp1" class="hourly-info"></h4>
+                <h4 id="temp2" class="hourly-info"></h4>
+                <h4 id="temp3" class="hourly-info"></h4>
+                <h4 id="temp4" class="hourly-info"></h4>
+                <h4 id="temp5" class="hourly-info"></h4>
+                <h4 id="temp6" class="hourly-info"></h4>
+                <h4 id="temp7" class="hourly-info"></h4>
+                <h4 id="temp8" class="hourly-info"></h4>
+                <h4 id="temp9" class="hourly-info"></h4>
+                <h4 id="temp10" class="hourly-info"></h4>
+                <h4 id="temp11" class="hourly-info"></h4>
+                
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <script src="main.js" defer></script>
-</body>
+  </body>
 </html>

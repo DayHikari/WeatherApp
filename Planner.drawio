@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="pwrnCCXdlygUe7S9XfU-" name="Design Outline">
-        <mxGraphModel dx="1308" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="953" dy="536" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -44,7 +44,7 @@
                     <mxGeometry x="200" y="410" width="410" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="Other info on the area perhaps? See API's information.&lt;br&gt;&lt;br&gt;This section will only appear if one of the 7 day forcast sections are clicked which will then show great detail for that day in this section. This will include: hourly temp and apparent temp, hourly rain chance, hourly weather type images,&amp;nbsp; as well as all of the daily info above" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="140" y="550" width="580" height="200" as="geometry"/>
+                    <mxGeometry x="135" y="550" width="580" height="200" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
@@ -391,56 +391,56 @@
         </mxGraphModel>
     </diagram>
     <diagram id="9-muJbVr12lNvr4feu3j" name="7-Day Forecast Sprint">
-        <mxGraphModel dx="1308" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="953" dy="536" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="buakQFmd89IYI6-JmA8u-1" value="7-Day Mini Forecast" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=20;" vertex="1" parent="1">
+                <mxCell id="buakQFmd89IYI6-JmA8u-1" value="7-Day Mini Forecast" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=20;" parent="1" vertex="1">
                     <mxGeometry x="260" y="50" width="250" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="buakQFmd89IYI6-JmA8u-4" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" edge="1" parent="1" source="buakQFmd89IYI6-JmA8u-2" target="buakQFmd89IYI6-JmA8u-3">
+                <mxCell id="buakQFmd89IYI6-JmA8u-4" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" source="buakQFmd89IYI6-JmA8u-2" target="buakQFmd89IYI6-JmA8u-3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="buakQFmd89IYI6-JmA8u-2" value="Update URL to include addition 7 days" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="1">
+                <mxCell id="buakQFmd89IYI6-JmA8u-2" value="Update URL to include addition 7 days" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="200" y="110" width="400" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="6RBvS8vupX5IbYY0tzb3-4" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" edge="1" parent="1" source="buakQFmd89IYI6-JmA8u-3" target="6RBvS8vupX5IbYY0tzb3-3">
+                <mxCell id="6RBvS8vupX5IbYY0tzb3-4" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" source="buakQFmd89IYI6-JmA8u-3" target="6RBvS8vupX5IbYY0tzb3-3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="buakQFmd89IYI6-JmA8u-3" value="HTML: Create a section/div to contain all the 7 day forcasts" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="1">
+                <mxCell id="buakQFmd89IYI6-JmA8u-3" value="HTML: Create a section/div to contain all the 7 day forcasts" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="200" y="200" width="400" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="6RBvS8vupX5IbYY0tzb3-6" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" edge="1" parent="1" source="6RBvS8vupX5IbYY0tzb3-3" target="6RBvS8vupX5IbYY0tzb3-5">
+                <mxCell id="6RBvS8vupX5IbYY0tzb3-6" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" source="6RBvS8vupX5IbYY0tzb3-3" target="6RBvS8vupX5IbYY0tzb3-5" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="6RBvS8vupX5IbYY0tzb3-3" value="HTML: Create sections&amp;nbsp; for mini weather details:&lt;br&gt;Date, weather type image, temp min/max" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="1">
+                <mxCell id="6RBvS8vupX5IbYY0tzb3-3" value="HTML: Create sections&amp;nbsp; for mini weather details:&lt;br&gt;Date, weather type image, temp min/max" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="200" y="290" width="400" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="6RBvS8vupX5IbYY0tzb3-8" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" edge="1" parent="1" source="6RBvS8vupX5IbYY0tzb3-5" target="6RBvS8vupX5IbYY0tzb3-7">
+                <mxCell id="6RBvS8vupX5IbYY0tzb3-8" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" source="6RBvS8vupX5IbYY0tzb3-5" target="6RBvS8vupX5IbYY0tzb3-7" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="6RBvS8vupX5IbYY0tzb3-5" value="CSS: Style the boxes so that they look an dmove as needed" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="1">
+                <mxCell id="6RBvS8vupX5IbYY0tzb3-5" value="CSS: Style the boxes so that they look an dmove as needed" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="200" y="370" width="400" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="6RBvS8vupX5IbYY0tzb3-10" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" edge="1" parent="1" source="6RBvS8vupX5IbYY0tzb3-7" target="6RBvS8vupX5IbYY0tzb3-9">
+                <mxCell id="6RBvS8vupX5IbYY0tzb3-10" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" source="6RBvS8vupX5IbYY0tzb3-7" target="6RBvS8vupX5IbYY0tzb3-9" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="6RBvS8vupX5IbYY0tzb3-7" value="JS: Create new function to display the infromation from the API. Function should update all boxes" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="1">
+                <mxCell id="6RBvS8vupX5IbYY0tzb3-7" value="JS: Create new function to display the infromation from the API. Function should update all boxes" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="200" y="470" width="400" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="6RBvS8vupX5IbYY0tzb3-12" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" edge="1" parent="1" source="6RBvS8vupX5IbYY0tzb3-9" target="6RBvS8vupX5IbYY0tzb3-11">
+                <mxCell id="6RBvS8vupX5IbYY0tzb3-12" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" source="6RBvS8vupX5IbYY0tzb3-9" target="6RBvS8vupX5IbYY0tzb3-11" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="6RBvS8vupX5IbYY0tzb3-9" value="HTML: Create section for detailed forcast from next 7 days with layout and wording" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="1">
+                <mxCell id="6RBvS8vupX5IbYY0tzb3-9" value="HTML: Create section for detailed forcast from next 7 days with layout and wording" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="200" y="560" width="400" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="6RBvS8vupX5IbYY0tzb3-14" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" edge="1" parent="1" source="6RBvS8vupX5IbYY0tzb3-11" target="6RBvS8vupX5IbYY0tzb3-13">
+                <mxCell id="6RBvS8vupX5IbYY0tzb3-14" value="" style="edgeStyle=none;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" source="6RBvS8vupX5IbYY0tzb3-11" target="6RBvS8vupX5IbYY0tzb3-13" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="6RBvS8vupX5IbYY0tzb3-11" value="CSS: Style the box so it looks as required with the correct box layout and movements. Then set display to none." style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="1">
+                <mxCell id="6RBvS8vupX5IbYY0tzb3-11" value="CSS: Style the box so it looks as required with the correct box layout and movements. Then set display to none." style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="200" y="650" width="400" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="6RBvS8vupX5IbYY0tzb3-13" value="JS: New call function which requests data from the API that uses the latiLong function and a new API URL to get the data. Then a new display function which applies the data to the section and changes display setting.&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="1">
+                <mxCell id="6RBvS8vupX5IbYY0tzb3-13" value="JS: New call function which requests data from the API that uses the latiLong function and a new API URL to get the data. Then a new display function which applies the data to the section and changes display setting.&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;fontColor=#FFFFFF;" parent="1" vertex="1">
                     <mxGeometry x="200" y="740" width="400" height="140" as="geometry"/>
                 </mxCell>
             </root>
