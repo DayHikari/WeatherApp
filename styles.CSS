@@ -157,6 +157,61 @@ main {
     background-color: forestgreen;
 }
 
+#overview-data{
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+
+#hourly-time {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    padding-left: 130px;
+}
+
+#hourly-temp {
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+
+#hourly-a-temp {
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+
+#hourly-rain-chance {
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+}
+
+#hourly-weather-image {
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    padding-left: 130px;
+}
+
+.overview-subtitle {
+    width: 110px;
+    text-align: center;
+}
+
 
 
 @media (max-width: 1900px) {
