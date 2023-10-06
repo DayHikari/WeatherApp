@@ -108,6 +108,7 @@ main {
     grid-column-start: 1;
     grid-column-end: 3;
 }
+
 .daily-image {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -140,7 +141,9 @@ main {
 
 .sevenDayA {
     text-decoration: none;
+    color: black;
 }
+
 
 #seven-day-holder {
     display: flex;
@@ -152,17 +155,57 @@ main {
 }
 
 .sevenDays {
-    width: 120px;
-    height: 200px;
+    width: 150px;
+    height: 70px;
     background-color: forestgreen;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
-#overview-data{
-    display: grid;
-    grid-template-columns: repeat(25, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 0px;
+
+.sevenDays h4 {
+    width: 100%;
+}
+
+.sevenDays img {
+    width: 64px;
+    height: 64px;
+    margin-top: -50px;
+    margin-bottom: -120px;
+    display: none;
+}
+
+.sevenDays p {
+    width: 100%;
+    margin-bottom: -80px;
+    display: none;
+}
+
+/* .sevenDays:hover {
+    height: 250px;
+}
+
+.sevenDays:hover .hidden {
+    display: block;
+} */
+
+
+
+
+
+#overview-header {
+    padding-top: 50px;
+}
+
+#overview-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin: auto;
 }
 
 #hourly-time {

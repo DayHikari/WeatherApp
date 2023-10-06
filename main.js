@@ -23,6 +23,15 @@ const yesterdayImage = document.getElementById("yesterday-image");
 // Tomorrows weather image type vraiable
 const tomorrowImage = document.getElementById("tomorrow-image");
 
+// 7 day forecast div listener
+const sevenDayDiv = document.querySelectorAll(".sevenDays");
+
+// Submitted variable
+let submitted = 0;
+
+
+
+// // Location and weather data generating functions
 // Location generating function
 async function localGen (userInput) {
     const response = await fetch (`https://geocoding-api.open-meteo.com/v1/search?name=${userInput}&count=1&language=en&format=json`);
@@ -38,7 +47,7 @@ async function localGen (userInput) {
 // Weather fetching function
 async function weatherFetch(latiLong) {
    // const response = await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latiLong[0]}&longitude=${latiLong[1]}&current_weather=true&forecast_days=1`);
-    const response = await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latiLong[0]}&longitude=${latiLong[1]}&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,precipitation_probability_max,windspeed_10m_max&current_weather=true&timezone=auto&past_days=1&forecast_days=3`)
+    const response = await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latiLong[0]}&longitude=${latiLong[1]}&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,precipitation_probability_max,windspeed_10m_max&current_weather=true&timezone=auto&past_days=1`)
 
     if (!response.ok) {
         alert(`Request error. Status: ${response.status}`);
@@ -55,7 +64,10 @@ async function weatherFetch(latiLong) {
     return weatherData;
 }
 
-// Display function
+
+
+// // Header
+// Header display function
 function headerDisplayWeather (weatherData) {
     // Set the headerTemp id to a const
     const headerTemp = document.getElementById("headerTemp");
@@ -64,7 +76,7 @@ function headerDisplayWeather (weatherData) {
     headerTemp.textContent = `${weatherData.current_weather.temperature}  	\xB0C`;
 
     // Call weather image type setter
-    weatherImageSetter("header", weatherData.current_weather.weathercode)
+    headerImage.src = weatherImageSetter(weatherData.current_weather.weathercode)
 
     // Case correction on inputted value to a variable
     const locationName = caseFixer(inputBox.value)
@@ -76,30 +88,36 @@ function headerDisplayWeather (weatherData) {
     inputBox.style.display = "none";
 };
 
+
+
+
+// // Main body
 // Body weather displaying function. Multi-purpose, i.e. can be used for different days
 function bodyDisplay (day, weatherData) {
 
     // Variable to load information depending on the if statement result
     let dayIndex = 1;
     let theDay = "";
+    //Variable to shorten data name
+    const data = weatherData.daily;
 
     // If statement to decide which day the information is being loaded for
     if (day === "yesterday") {
         dayIndex = 0;
         theDay = "yesterday";
+        yesterdayImage.src = weatherImageSetter(data.weathercode[dayIndex]);
     } else if (day === "tomorrow") {
         dayIndex = 2;
         theDay = "tomorrow";
+        tomorrowImage.src = weatherImageSetter(data.weathercode[dayIndex]);
     } else if (day === "today") {
         theDay = "today";
+        todayImage.src = weatherImageSetter(data.weathercode[dayIndex]);
     }
     
-    //Variable to shorten data name
-    const data = weatherData.daily;
 
     // Variables declared for each info HTML location
     // Set text content to appropriate API info
-    weatherImageSetter(`${theDay}`, data.weathercode[dayIndex]);
 
     const maxTemp = document.getElementById(`${theDay}-max-temp`);
     maxTemp.textContent = data.temperature_2m_max[dayIndex];
@@ -126,43 +144,93 @@ function bodyDisplay (day, weatherData) {
     sunset.textContent = data.sunset[dayIndex].substr(11,5);
 };
 
-function weatherImageSetter (imageLocal, weatherCode) {
-    // Variables to use when deciding which image src is updated
-    let image;
 
-    // Switch statement to decide which image to update
-    switch (imageLocal) {
-        case "header":
-            image = headerImage;
-            break;
-        case "today":
-            image = todayImage;
-            break;
-        case "yesterday":
-            image = yesterdayImage;
-            break;
-        case "tomorrow":
-            image = tomorrowImage;
-            break;
-    };
+// // 7 Day forecast
+// Function to set the 7 day forecast boxes
+async function dailyForecastDisplay (weatherData) {
+    // Declare variable to daily data
+    const daily = weatherData.daily;
+    const info = Object.keys(daily)
+
+    // For loop to interate through daily 
+    for (let i = 0; i < info.length; i++) {
+
+        // For loop to interate through each dataset in daily
+        for (let j = 0; j < daily[info[i]].length; j++) {
+
+            // DOM manipulation of the forecast boxes to increase height
+            const div = document.getElementById(`day${j}-div`);
+            div.style.height = "120px";
+
+            // Switch statement to set DOM depending on dataset
+            switch (info[i]) {
+                case "time":
+                    const day = document.getElementById(`day${j}-date`);
+                    day.textContent = daily[info[i]][j];
+                    break;
+                case "weathercode":
+                    const image = document.getElementById(`day${j}-image`);
+                    image.src = `${await weatherImageSetter(daily[info[i]][j])}`;
+                    image.style.display = "block";
+                    break;
+                case "temperature_2m_min":
+                    const temp = document.getElementById(`day${j}-temp`);
+                    temp.textContent = `Temp: ${daily[info[i]][j]} / ${daily[info[i-1]][j]} \xB0C`;
+                    break;
+                case "precipitation_probability_max":
+                    const rain = document.getElementById(`day${j}-rain`);
+                    rain.textContent = `Rain Chance: ${daily[info[i]][j]}%`;
+                    break;
+                default:
+                    continue;
+            }
+        }
+    }
+}
+
+
+
+// // Weather image setter
+// Function to set the src of image tags to the appropriate weather image
+function weatherImageSetter (weatherCode) {
+    // Variables to use when deciding which image src is updated
+        let source;
+
+    // // Switch statement to decide which image to update
+    // switch (imageLocal) {
+    //     case "header":
+    //         image = headerImage;
+    //         break;
+    //     case "today":
+    //         image = todayImage;
+    //         break;
+    //     case "yesterday":
+    //         image = yesterdayImage;
+    //         break;
+    //     case "tomorrow":
+    //         image = tomorrowImage;
+    //         break;
+    //     default:
+    //         break;
+    // };
 
     // Sets the img src to a png
     // Switch function to set image depending on the weather code
     switch (weatherCode) {
         // Sunny
         case 0:
-            image.src = "sun.png";
+            source = "sun.png";
             break;
         // Cloudy
         case 1:
         case 2:
         case 3:
-            image.src = "partly-cloudy-day.png";
+            source = "partly-cloudy-day.png";
             break;
         // Foggy or Hazay
         case 45:
         case 48:
-            image.src = "haze.png";
+            source = "haze.png";
             break;
         // Raining
         case 51:
@@ -178,7 +246,7 @@ function weatherImageSetter (imageLocal, weatherCode) {
         case 80:
         case 81:
         case 82:
-            image.src = "rain.png";
+            source = "rain.png";
             break;
         // Snowing
         case 71:
@@ -186,21 +254,24 @@ function weatherImageSetter (imageLocal, weatherCode) {
         case 75:
         case 85:
         case 86:
-            image.src = "snow.png";
+            source = "snow.png";
             break;
         // Hail
         case 77:
-            image.src = "hail.png";
+            source = "hail.png";
             break;
         // Storm
         case 95:
         case 96:
         case 99:
-            image.src = "storm.png";
+            source = "storm.png";
             break;
     }
+    return source;
 }
 
+
+// // Case fixer for header
 // Function to put proper case on user input
 function caseFixer (location) {
     // Variable for the final concatted name
@@ -246,6 +317,8 @@ function caseFixer (location) {
 }
 
 
+
+// // Call and display functions
 // Call and display function
 async function callAndDisplay (userInput) {
     // Using user inputted location, generate latitude and longitude and se to latiLong.
@@ -262,7 +335,11 @@ async function callAndDisplay (userInput) {
     await bodyDisplay("yesterday", weatherData);
 
     await bodyDisplay("tomorrow", weatherData);
+
+    await dailyForecastDisplay(weatherData);
 }
+
+
 
 // // Event listeners
 // Submit button event listener to take in user input
@@ -284,6 +361,9 @@ submit.addEventListener("click", async function () {
 
     // Make redo inline
     redo.style.display = "inline";
+
+    // Change submitted value
+    submitted = 1;
 });
 
 // Redo button event listener to allow new location
@@ -299,7 +379,23 @@ redo.addEventListener("click", function () {
 
     // Un-remove submit button
     submit.style.display = "inline"
+
+    // Change submitted value
+    submitted = 0;
 });
+
+sevenDayDiv.forEach(box => {
+    box.addEventListener("mouseover", function hover() {
+        if (submitted === 1) {
+            for (let i = 0; i <= 7; i++) {
+                const div = document.getElementById(`day${i}-div`);
+                div.style.height = "250px";
+                const hiddenText = document.getElementsByClassName("hidden");
+                hiddenText.style.display = "block";
+            }
+        }
+    });
+})
 
 
 
