@@ -214,7 +214,7 @@ async function dailyForecastDisplay(weatherData) {
 // Function to set the hourly information for the selected date
 async function hourlyDisplay(day, hourlyData) {
     // Set date to the box date
-    document.getElementById("overview-header").textContent = hourlyData.daily.time[day];
+    document.getElementById("overview-date").textContent = hourlyData.daily.time[day];
 
     // Set sunrise time
     const test = document.querySelector("#sunrise-time");
