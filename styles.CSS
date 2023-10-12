@@ -184,21 +184,12 @@ main {
     display: none;
 }
 
-/* .sevenDays:hover {
-    height: 250px;
+
+
+#overview-info {
+    display: none;
 }
 
-.sevenDays:hover .hidden {
-    display: block;
-} */
-
-
-
-
-
-#overview-header {
-    padding-top: 50px;
-}
 
 #overview-header {
     display: flex;
@@ -208,6 +199,7 @@ main {
     width: 200px;
     margin: auto;
     text-align: center;
+    padding-top: 50px;
 }
 
 #overview-date {
@@ -226,6 +218,11 @@ main {
     border: 1px solid black;
 }
 
+.overview-subtitle {
+    width: 110px;
+    text-align: center;
+}
+
 #hourly-grid h4, #hourly-grid img {
     border: 1px solid black;
 }
@@ -233,72 +230,9 @@ main {
 #hourly-grid img {
     align-self: center;
     justify-self: center;
-}
-
-#hourly-time {
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 0px;
-    padding-left: 130px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-#hourly-temp {
-    display: grid;
-    grid-template-columns: repeat(25, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 0px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-#hourly-a-temp {
-    display: grid;
-    grid-template-columns: repeat(25, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 0px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-#hourly-rain-chance {
-    display: grid;
-    grid-template-columns: repeat(25, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 0px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-#hourly-weather-image {
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 10px;
-    grid-row-gap: 0px;
-    padding-left: 130px;
-    border: 1px solid black;
-    margin-left: 1fr;
-}
-
-.overview-subtitle {
-    width: 110px;
-    text-align: center;
-}
-
-#hourly-grid img {
     width: clamp(32px, 100%, 64px);
 }
+
 
 
 @media (max-width: 1900px) {
