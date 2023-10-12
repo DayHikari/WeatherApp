@@ -49,7 +49,7 @@ async function localGen(userInput) {
 
 // Weather fetching function
 async function weatherFetch(latiLong) {
-  // const response = await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latiLong[0]}&longitude=${latiLong[1]}&current_weather=true&forecast_days=1`);
+ 
   const response = await fetch(
     `https://api.open-meteo.com/v1/forecast?latitude=${latiLong[0]}&longitude=${latiLong[1]}&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,precipitation_probability_max,windspeed_10m_max&current_weather=true&timezone=auto&past_days=1`
   );

@@ -1,7 +1,10 @@
 :root {
-    --main-boxes: #CEE5F2;
-    --main-boxes2: #aec7f5;
-    --main-highlight-text: #032863;
+    /* --main-boxes: #CEE5F299; */
+    --main-boxes: #9fb4cf99;
+    /* --main-boxes2: #aec7f599; */
+    --main-boxes2: #8c97a399;
+    /* --main-highlight-text: #032863; */
+    --main-highlight-text: #0a1624;
 }
 
 * {
@@ -10,7 +13,10 @@
 
 body {
     margin: 0;
-    background-image: linear-gradient(to top right, #89BE99, #B1C5AA, #FEFAE0, #FAEDCD, #D8AD83);
+    /* background-image: linear-gradient(to top right, #89BE99, #B1C5AA, #FEFAE0, #FAEDCD, #D8AD83); */
+    background-image: url("light-background.jpg");
+    /* background-image: url("grad-background.jpg"); */
+    background-size: cover;
     color: var(--main-highlight-text);
 }
 
@@ -24,8 +30,8 @@ header {
     top: 7px;
     width: 600px;
     height: 120px;
-    background-image: radial-gradient(var(--main-boxes) 50%, var(--main-boxes2));
-    border: 2px solid var(--main-highlight-text);
+    background-image: radial-gradient(#9fb4cf 50%, #8c97a3);
+    /* border: 2px solid var(--main-highlight-text); */
     border-radius: 45px;
     display: grid;
     grid-template-columns: auto;
@@ -95,7 +101,7 @@ main {
 
 .daily-weather {
     background-image: radial-gradient(var(--main-boxes) 50%, var(--main-boxes2));
-    border: 2px solid var(--main-highlight-text);
+    /* border: 2px solid var(--main-highlight-text); */
     padding: 20px 0;
     border-radius: 45px;
     display: grid;
@@ -163,7 +169,7 @@ main {
     width: 200px;
     height: 70px;
     background-image: radial-gradient(var(--main-boxes) 50%, var(--main-boxes2));
-    border: 2px solid var(--main-highlight-text);
+    /* border: 2px solid var(--main-highlight-text); */
     border-radius: 90px;
     display: flex;
     flex-wrap: wrap;
@@ -200,7 +206,7 @@ main {
 #overview-info {
     display: none;
     background-image: radial-gradient(var(--main-boxes) 50%, var(--main-boxes2));
-    border: 2px solid var(--main-highlight-text);
+    /* border: 2px solid var(--main-highlight-text); */
     box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.4);
     margin: 0px 10px;
     padding: -20px 5px 0px 0px;
