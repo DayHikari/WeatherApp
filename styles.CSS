@@ -1,10 +1,17 @@
+:root {
+    --main-boxes: #CEE5F2;
+    --main-boxes2: #aec7f5;
+    --main-highlight-text: #032863;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    background-color: orangered;
+    background-image: linear-gradient(to top right, #89BE99, #B1C5AA, #FEFAE0, #FAEDCD, #D8AD83);
+    color: var(--main-highlight-text);
 }
 
 header {
@@ -15,20 +22,18 @@ header {
 #header {
     position: fixed;
     top: 7px;
-    border: 1px solid black;
     width: 600px;
     height: 120px;
-    background-color: bisque;
+    background-image: radial-gradient(var(--main-boxes) 50%, var(--main-boxes2));
+    border: 2px solid var(--main-highlight-text);
+    border-radius: 45px;
     display: grid;
     grid-template-columns: auto;
     gap: 5px;
     text-align: center;
     justify-content: center;
     font-size: larger;
-}
-
-#header div {
-    border: 1px solid black;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.4);
 }
 
 #user-input {
@@ -38,6 +43,7 @@ header {
     height: 45px;
     justify-content: center;
     text-align: center;
+    font-size: 25px;
 }
 
 #submit {
@@ -45,8 +51,8 @@ header {
 }
 
 #redo {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     display: none;
 }
 
@@ -54,6 +60,7 @@ header {
     display: flex;
     text-align: center;
     justify-content: center;
+    font-size: 23px;
 }
 
 .gap-1 {
@@ -65,43 +72,39 @@ header {
 }
 
 .gap-2 {
-    width: 10px;
+    width: 25px;
 }
 
 main {
-    margin-top: 140px;
+    margin-top: 200px;
     height: 200%;
-    background-color: red;
     padding-bottom: 100px;
 }
 
 
 #content {
     width: 100%;
-    /* height: 3000px; */
-    border: 1px solid black;
 }
 
 .daily-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: aquamarine;
     padding: 10px;
 }
 
 .daily-weather {
-    background-color: blueviolet;
-    border: 1px solid black;
+    background-image: radial-gradient(var(--main-boxes) 50%, var(--main-boxes2));
+    border: 2px solid var(--main-highlight-text);
     padding: 20px 0;
-    text-align: center;
+    border-radius: 45px;
     display: grid;
     grid-template-columns: auto auto;
     align-items: baseline;
+    text-align: center;
     gap: 5px;
-    
-    height: 1000px;
-    
+    height: 1000px; 
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.4);   
 }
 
 .daily-titles {
@@ -120,14 +123,12 @@ main {
     width: 350px;
     font-size: 25px;
     text-align: right;
-    border: 1px solid black;
 }
 
 .daily-text {
     font-size: 23px;
     text-align: left;
     width: 250px;
-    border: 1px solid black;
 }
 
 #yesterday-info, #tomorrow-info {
@@ -140,41 +141,50 @@ main {
 }
 
 
-.sevenDayA {
-    text-decoration: none;
-    color: black;
-}
 
+#seven-day-forcast-section {
+    padding-top: 75px;
+}
 
 #seven-day-holder {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    background-color: pink;
     padding: 10px;
 }
 
+.sevenDayA {
+    text-decoration: none;
+    color: var(--main-highlight-text);
+}
+
 .sevenDays {
-    width: 150px;
+    width: 200px;
     height: 70px;
-    background-color: forestgreen;
+    background-image: radial-gradient(var(--main-boxes) 50%, var(--main-boxes2));
+    border: 2px solid var(--main-highlight-text);
+    border-radius: 90px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    padding-bottom: 15px;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.4);
+    margin-bottom: 50px;
 }
 
 
 .sevenDays h4 {
     width: 100%;
+    font-size: 20px;
 }
 
 .sevenDays img {
     width: 64px;
     height: 64px;
-    margin-top: -50px;
-    margin-bottom: -120px;
+    margin-top: -40px;
+    margin-bottom: -170px;
     display: none;
 }
 
@@ -182,12 +192,19 @@ main {
     width: 100%;
     margin-bottom: -80px;
     display: none;
+    font-size: 17px;
 }
 
 
 
 #overview-info {
     display: none;
+    background-image: radial-gradient(var(--main-boxes) 50%, var(--main-boxes2));
+    border: 2px solid var(--main-highlight-text);
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.4);
+    margin: 0px 10px;
+    padding: -20px 5px 0px 0px;
+    border-radius: 45px;
 }
 
 
@@ -199,11 +216,12 @@ main {
     width: 200px;
     margin: auto;
     text-align: center;
-    padding-top: 50px;
+    padding-top: -20px;
 }
 
 #overview-date {
     width: 100%;
+    padding-top: -50px;
 }
 
 #hourly-grid {
@@ -215,16 +233,11 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 1px solid black;
 }
 
 .overview-subtitle {
     width: 110px;
     text-align: center;
-}
-
-#hourly-grid h4, #hourly-grid img {
-    border: 1px solid black;
 }
 
 #hourly-grid img {

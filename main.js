@@ -214,7 +214,7 @@ async function dailyForecastDisplay(weatherData) {
 // Function to set the hourly information for the selected date
 async function hourlyDisplay(day, hourlyData) {
     // Set the hourly overview box display to inline
-    document.getElementById("overview-info").style.display = "inline";
+    document.getElementById("overview-info").style.display = "block";
   
   // Set date to the box date
     document.getElementById("overview-date").textContent = hourlyData.daily.time[day];
@@ -452,7 +452,7 @@ sevenDayDiv.forEach(function (elem) {
     // This if prevents the function performing before weatherdata has been found
     if (submitted === 1) {
       // Set the box height to 250px
-      elem.style.height = "250px";
+      elem.style.height = "350px";
 
       // Initiates a variable to the character at index 3 of the id of the event element. This is the box number.
       const boxNum = elem.id.charAt(3);
