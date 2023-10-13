@@ -18,6 +18,7 @@ body {
     /* background-image: url("grad-background.jpg"); */
     background-size: cover;
     color: var(--main-highlight-text);
+    font-family: sans-serif;
 }
 
 header {
